@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .main-container {
+      width: 600px;
+      margin: 40px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      border-bottom: 3px solid black;
+    }
+
+    .video-container {
+      position: relative;
+    }
+    .video-container video {
+      width: 100%;
+    }
+    .video-container .hover-text {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(calc(-50% - 24px), -50%);
+      background-color: blue;
+      color: white;
+      padding: 8px 8px;
+      border-radius: 8px;
+      pointer-events: none;
+      box-shadow: 4px 4px 50px -4px rgba(0, 0, 0, 0.8);
+      opacity: 0;
+      transition: all 400ms ease;
+      letter-spacing: 0.8px;
+    }
+    .video-container .hover-text.active {
+      opacity: 1;
+      letter-spacing: 0;
+      transform: translate(-50% -50%);
+    }
+    .video-description {
+      padding: 16px;
+      line-height: 1.7;
+      background: #edf6f9;
+      color: black;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div class="main-container">
+      <div class="video-container">
+        <video
+          loop
+          src="./videos/Main Tota Hare Rang Ka - Hindi Rhymes - मैं तोता मैं तोता - Hindi Rhymes For Kids - Baby Songs Hindi.mp4"
+        ></video>
+        <div class="hover-text active">hover to play video</div>
+      </div>
+      <div class="video-description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
+        enim?
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
